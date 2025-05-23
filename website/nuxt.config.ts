@@ -1,7 +1,12 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  compatibilityDate: "2024-04-03",
   future: {
     compatibilityVersion: 4,
   },
-  compatibilityDate: "2024-04-03",
+  modules: ["@nuxtjs/seo"],
+  site: {
+    defaultLocale: "nl",
+    name: "Play-ER",
+    url: "https://www.play-er.be",
+  },
 });
