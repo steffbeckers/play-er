@@ -14,8 +14,13 @@ const navigationMenuItems: NavigationMenuItem[][] = [
 <template>
   <UDashboardGroup>
     <UDashboardSidebar collapsible>
-      <template #header>
-        <UDashboardSidebarCollapse variant="subtle" />
+      <template #header="{ collapsed }">
+        <template v-if="!collapsed">
+          <Logo />
+        </template>
+        <template v-else>
+          <Icon />
+        </template>
       </template>
       <template #default="{ collapsed }">
         <UNavigationMenu
@@ -29,6 +34,9 @@ const navigationMenuItems: NavigationMenuItem[][] = [
           orientation="vertical"
           class="mt-auto"
         />
+      </template>
+      <template #footer="{ collapsed }">
+        <UserMenu :collapsed="collapsed" />
       </template>
     </UDashboardSidebar>
     <slot />

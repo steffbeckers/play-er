@@ -5,10 +5,17 @@ definePageMeta({
 </script>
 
 <template>
-  <UPage>
-    <UPageHeader title="Dashboard" />
-    <UPageBody>
+  <UDashboardPanel id="dashboard">
+    <template #header>
+      <UDashboardNavbar title="Dashboard">
+        <template #leading>
+          <!-- TODO: Move this to a generic place? -->
+          <UDashboardSidebarCollapse variant="subtle" />
+        </template>
+      </UDashboardNavbar>
+    </template>
+    <template #body>
       <p>This is a test.</p>
-    </UPageBody>
-  </UPage>
+    </template>
+  </UDashboardPanel>
 </template>
