@@ -4,8 +4,9 @@ const user = useSupabaseUser();
 
 <template>
   <UApp>
-    <UHeader>
+    <UHeader title="Play-ER">
       <template #right>
+        <UColorModeButton />
         <UUser v-if="user" :name="user.name ?? user.email" />
       </template>
     </UHeader>
