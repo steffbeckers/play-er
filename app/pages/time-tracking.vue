@@ -1,51 +1,51 @@
 <script setup lang="ts">
-import type { NavigationMenuItem } from "@nuxt/ui";
-
 definePageMeta({
   layout: "dashboard",
 });
-
-const navigationMenuItems: NavigationMenuItem[][] = [
-  [
-    {
-      label: "General",
-      // TODO: Add icons?
-      // icon: "i-lucide-clock",
-      to: "/time-tracking",
-      exact: true,
-    },
-    {
-      label: "Snooker",
-      to: "/time-tracking/snooker",
-    },
-    {
-      label: "Pool",
-      to: "/time-tracking/pool",
-    },
-    {
-      label: "Darts",
-      to: "/time-tracking/darts",
-    },
-  ],
-];
 </script>
 
 <template>
   <UDashboardPanel id="time-tracking">
     <template #header>
-      <UDashboardNavbar title="Time tracking">
-        <template #leading>
-          <!-- TODO: Move this to a generic place? -->
-          <UDashboardSidebarCollapse variant="subtle" />
-        </template>
-      </UDashboardNavbar>
-      <UDashboardToolbar>
-        <!-- NOTE: The `-mx-1` class is used to align with the `DashboardSidebarCollapse` button here. -->
-        <UNavigationMenu :items="navigationMenuItems" highlight class="-mx-1 flex-1" />
-      </UDashboardToolbar>
+      <UDashboardNavbar title="Time tracking" />
     </template>
     <template #body>
-      <NuxtPage />
+      <div class="flex gap-8 h-full">
+        <div class="flex-1/5 flex flex-col gap-4">
+          <NuxtLink class="time-tracking__type-link" to="/time-tracking/snooker">
+            <UCard>
+              <h2>Snooker</h2>
+            </UCard>
+          </NuxtLink>
+          <NuxtLink class="time-tracking__type-link" to="/time-tracking/pool">
+            <UCard>
+              <h2>Pool</h2>
+            </UCard>
+          </NuxtLink>
+          <NuxtLink class="time-tracking__type-link" to="/time-tracking/darts">
+            <UCard>
+              <h2>Darts</h2>
+            </UCard>
+          </NuxtLink>
+        </div>
+        <NuxtPage class="flex-4/5" />
+      </div>
     </template>
   </UDashboardPanel>
 </template>
+
+<style lang="css" scoped>
+@reference "@/assets/css/main.css";
+
+.time-tracking__type-link {
+  @apply flex-1 focus:outline-none;
+}
+
+.time-tracking__type-link > div {
+  @apply flex h-full items-center justify-center transition hover:bg-elevated/50;
+}
+
+.time-tracking__type-link.router-link-active > div {
+  @apply bg-primary/75 border-primary border-2;
+}
+</style>

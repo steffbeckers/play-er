@@ -11,7 +11,7 @@ const navigationMenuItems: NavigationMenuItem[][] = [
     {
       label: "Time tracking",
       icon: "i-lucide-clock",
-      to: "time-tracking",
+      to: "/time-tracking",
     },
   ],
 ];
@@ -21,14 +21,17 @@ const navigationMenuItems: NavigationMenuItem[][] = [
   <UDashboardGroup>
     <UDashboardSidebar collapsible>
       <template #header="{ collapsed }">
-        <template v-if="!collapsed">
-          <PlayERLogo />
-        </template>
-        <template v-else>
-          <PlayERIcon />
-        </template>
+        <NuxtLink to="/">
+          <template v-if="!collapsed">
+            <PlayERLogo />
+          </template>
+          <template v-else>
+            <PlayERIcon />
+          </template>
+        </NuxtLink>
       </template>
       <template #default="{ collapsed }">
+        <UDashboardSidebarCollapse />
         <UNavigationMenu
           :collapsed="collapsed"
           :items="navigationMenuItems[0]"

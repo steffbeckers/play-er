@@ -7,15 +7,12 @@ definePageMeta({
 <template>
   <UDashboardPanel id="dashboard">
     <template #header>
-      <UDashboardNavbar title="Dashboard">
-        <template #leading>
-          <!-- TODO: Move this to a generic place? -->
-          <UDashboardSidebarCollapse variant="subtle" />
-        </template>
-      </UDashboardNavbar>
+      <UDashboardNavbar title="Dashboard" />
     </template>
     <template #body>
-      <p>Dashboard placeholder</p>
+      <UPageGrid>
+        <UPageCard title="Time tracking" icon="i-lucide-clock" to="/time-tracking" />
+      </UPageGrid>
     </template>
   </UDashboardPanel>
 </template>
