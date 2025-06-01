@@ -15,7 +15,7 @@ definePageMeta({
       </UDashboardNavbar>
     </template>
     <template #body>
-      <p>This is a test.</p>
+      <p>Dashboard placeholder</p>
     </template>
   </UDashboardPanel>
 </template>

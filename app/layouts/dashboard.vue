@@ -6,6 +6,12 @@ const navigationMenuItems: NavigationMenuItem[][] = [
     {
       label: "Dashboard",
       icon: "i-lucide-house",
+      to: "/",
+    },
+    {
+      label: "Time tracking",
+      icon: "i-lucide-clock",
+      to: "time-tracking",
     },
   ],
 ];
@@ -16,10 +22,10 @@ const navigationMenuItems: NavigationMenuItem[][] = [
     <UDashboardSidebar collapsible>
       <template #header="{ collapsed }">
         <template v-if="!collapsed">
-          <Logo />
+          <PlayERLogo />
         </template>
         <template v-else>
-          <Icon />
+          <PlayERIcon />
         </template>
       </template>
       <template #default="{ collapsed }">
