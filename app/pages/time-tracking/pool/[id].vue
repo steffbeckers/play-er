@@ -7,5 +7,5 @@ const route = await useRoute();
 </script>
 
 <template>
-  <p>Time tracking {{ route.params.slug }} placeholder</p>
+  <h2 class="text-3xl">Pool table {{ route.params.id }}</h2>
 </template>

@@ -2,6 +2,21 @@
 definePageMeta({
   layout: "dashboard",
 });
+
+const types = [
+  {
+    name: "Snooker",
+    slug: "snooker",
+  },
+  {
+    name: "Pool",
+    slug: "pool",
+  },
+  {
+    name: "Darts",
+    slug: "darts",
+  },
+];
 </script>
 
 <template>
@@ -12,19 +27,14 @@ definePageMeta({
     <template #body>
       <div class="flex gap-8 h-full">
         <div class="flex-1/5 flex flex-col gap-4">
-          <NuxtLink class="time-tracking__type-link" to="/time-tracking/snooker">
+          <NuxtLink
+            v-for="type in types"
+            :key="type.slug"
+            class="time-tracking__type-link"
+            :to="'/time-tracking/' + type.slug"
+          >
             <UCard>
-              <h2>Snooker</h2>
-            </UCard>
-          </NuxtLink>
-          <NuxtLink class="time-tracking__type-link" to="/time-tracking/pool">
-            <UCard>
-              <h2>Pool</h2>
-            </UCard>
-          </NuxtLink>
-          <NuxtLink class="time-tracking__type-link" to="/time-tracking/darts">
-            <UCard>
-              <h2>Darts</h2>
+              <h2 class="text-2xl">{{ type.name }}</h2>
             </UCard>
           </NuxtLink>
         </div>
