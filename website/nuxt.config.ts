@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
   },
-  modules: ["@nuxtjs/seo"],
+  modules: ["@nuxtjs/seo", "@nuxtjs/tailwindcss"],
   site: {
     defaultLocale: "nl",
     name: "Play-ER",
