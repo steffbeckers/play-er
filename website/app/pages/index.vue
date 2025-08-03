@@ -125,7 +125,7 @@ const route = useRoute();
         <h1>CONTACT</h1>
         <div class="flex gap-10">
           <div class="flex flex-1 flex-col border-4 border-gray-700 bg-white">
-            <img src="/images/voorgevel.png" alt="Play-ER" />
+            <img src="~/assets/images/voorgevel.png" alt="Play-ER" />
             <div class="flex flex-col gap-6 p-10">
               <div class="flex gap-6">
                 <div class="flex flex-1 flex-col">
@@ -158,13 +158,67 @@ const route = useRoute();
       </div>
     </section>
     <section id="games" class="w-full shadow-lg">
-      <div class="mx-auto max-w-6xl px-6 py-20">
+      <div class="mx-auto max-w-6xl px-6 py-20 flex flex-col gap-10">
         <h1>GAMES</h1>
+        <div class="grid grid-cols-3 grid-rows-2 gap-10">
+          <div class="flex flex-col gap-4">
+            <img src="~/assets/images/games/snooker.png" alt="Play-ER Snooker" />
+            <h2>SNOOKER</h2>
+            <p>
+              Voor de strategen onder ons. Onze 3 full-size snookertafels bieden de perfecte setting
+              voor een rustige maar intense game.
+            </p>
+          </div>
+          <div class="flex flex-col gap-4">
+            <img src="~/assets/images/games/darts.png" alt="Play-ER Snooker" />
+            <h2>DARTS</h2>
+            <p>
+              Speel zoals het hoort: op onze 8 vaste dartsblokken, met echte pijlen. Ideaal voor een
+              stevig duel met vrienden of een gezellige mini-competitie.
+            </p>
+          </div>
+          <div class="flex flex-col gap-4">
+            <img src="~/assets/images/games/pool.png" alt="Play-ER Snooker" />
+            <h2>POOL</h2>
+            <p>
+              Dé klassieker. Onze 2 professionele pooltafels zijn perfect voor zowel beginners als
+              doorgewinterde spelers.
+            </p>
+          </div>
+          <div class="flex flex-col gap-4">
+            <img src="~/assets/images/games/golfbiljart.png" alt="Play-ER Snooker" />
+            <h2>GOLFBILJART</h2>
+            <p>
+              Een spel met traditie, dat nog altijd even leuk blijft. Makkelijk op te pikken,
+              moeilijk om te stoppen.
+            </p>
+          </div>
+          <div class="flex flex-col gap-4">
+            <img src="~/assets/images/games/tafelvoetbal.png" alt="Play-ER Snooker" />
+            <h2>TAFELVOETBAL</h2>
+            <p>
+              Een klassieker die nooit verveelt. Speel een snelle match met vrienden en ontdek wie
+              het snelst scoort. Perfect voor een intens duel vol adrenaline.
+            </p>
+          </div>
+          <div class="flex flex-col gap-4">
+            <img src="~/assets/images/games/bingo.png" alt="Play-ER Snooker" />
+            <h2>BINGO (18+)</h2>
+            <p>
+              Probeer je geluk aan onze legendarische Tony Rus Bingokast. Spannend, nostalgisch én
+              verslavend leuk.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
+    <section id="image-slider" class="w-full shadow-lg">
+      <p class="text-white">TODO: Image slider</p>
+    </section>
     <section id="clubs" class="w-full shadow-lg">
-      <div class="mx-auto max-w-6xl px-6 py-20">
+      <div class="mx-auto max-w-6xl px-6 py-20 flex flex-col gap-10">
         <h1>CLUBS</h1>
+        <p>TODO: Clubs overview</p>
       </div>
     </section>
   </main>
@@ -228,6 +282,11 @@ section#contact {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+section#image-slider {
+  background-color: #323031;
+  height: 450px;
 }
 
 footer {
