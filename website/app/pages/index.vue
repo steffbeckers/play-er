@@ -3,7 +3,7 @@ const route = useRoute();
 </script>
 
 <template>
-  <header class="w-full fixed">
+  <header class="w-full fixed z-10">
     <div class="mx-auto max-w-6xl px-6 flex justify-between h-20">
       <a href="#" class="flex pe-8">
         <img src="~/assets/images/P_Dark.svg" alt="Play-ER Icon" width="56" />
@@ -121,8 +121,40 @@ const route = useRoute();
       </div>
     </section>
     <section id="contact" class="w-full shadow-lg">
-      <div class="mx-auto max-w-6xl px-6 py-20">
+      <div class="mx-auto max-w-6xl px-6 py-20 flex flex-col gap-10">
         <h1>CONTACT</h1>
+        <div class="flex gap-10">
+          <div class="flex flex-1 flex-col border-4 border-gray-700 bg-white">
+            <img src="/images/voorgevel.png" alt="Play-ER" />
+            <div class="flex flex-col gap-6 p-10">
+              <div class="flex gap-6">
+                <div class="flex flex-1 flex-col">
+                  <div>Telefoonnummer</div>
+                  <a class="text-primary text-xl" href="tel:+32469649875">+32 469 64 98 75</a>
+                </div>
+                <div class="flex flex-1 flex-col">
+                  <div>E-mailadres</div>
+                  <a class="text-primary text-xl" href="mailto:info@play-er.be">info@play-er.be</a>
+                </div>
+              </div>
+              <div class="flex gap-6">
+                <div class="flex flex-1 flex-col">
+                  <div>Adres</div>
+                  <a
+                    class="text-primary text-xl"
+                    href="https://www.google.com/maps/place/Beverlo-Dorp+14,+3581+Beringen/@51.0877722,5.2255537,16.75z/data=!4m6!3m5!1s0x47c1305cb79abb61:0x409459a39482b087!8m2!3d51.0879745!4d5.2218059!16s%2Fg%2F11c2bsn6ss?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D"
+                    >Beverlo-Dorp 14<br />3581 Beringen</a
+                  >
+                </div>
+                <div class="flex flex-1 flex-col">
+                  <div>btw-nummer</div>
+                  <div class="text-xl">BE 1024.080.468</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex-1"></div>
+        </div>
       </div>
     </section>
     <section id="games" class="w-full shadow-lg">
@@ -168,11 +200,6 @@ h2 {
   font-weight: 600;
 }
 
-section#home {
-  background-color: #323031;
-  background: radial-gradient(circle, rgba(102, 102, 102, 1) 0%, rgba(50, 48, 49, 1) 75%);
-}
-
 header .social-media svg:hover path.colored {
   fill: #00adee;
 }
@@ -188,6 +215,19 @@ nav a.active {
 
 nav a:hover {
   color: #00adee;
+}
+
+section#home {
+  background-color: #323031;
+  background: radial-gradient(circle, rgba(102, 102, 102, 1) 0%, rgba(50, 48, 49, 1) 75%);
+}
+
+section#contact {
+  background-color: #f7f6f6;
+  background-image: url("~/assets/images/google_maps.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 footer {
