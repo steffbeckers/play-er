@@ -3,10 +3,26 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
   },
-  modules: ["@nuxtjs/seo", "@nuxtjs/tailwindcss"],
+  googleFonts: {
+    families: {
+      Roboto: true,
+    },
+  },
+  modules: ["@nuxtjs/google-fonts", "@nuxtjs/seo", "@nuxtjs/tailwindcss"],
   site: {
     defaultLocale: "nl",
     name: "Play-ER",
     url: "https://www.play-er.be",
+  },
+  tailwindcss: {
+    config: {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Roboto", "sans-serif"],
+          },
+        },
+      },
+    },
   },
 });
