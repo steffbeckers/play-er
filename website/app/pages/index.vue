@@ -91,9 +91,33 @@ const route = useRoute();
       </div>
     </section>
     <section id="reserveren" class="w-full shadow-lg">
-      <div class="mx-auto max-w-6xl px-6 py-20">
+      <div class="mx-auto max-w-6xl px-6 py-20 flex flex-col gap-10">
         <h1>RESERVEREN</h1>
-        <div class="flex"></div>
+        <div class="flex gap-10">
+          <div class="flex flex-1 border-4 border-gray-700 relative p-10">
+            <h2 class="absolute bg-white px-2 top-[-1.25rem] left-8">CONTACTGEGEVENS</h2>
+            <div class="flex flex-1 flex-col">
+              <div>Telefoonnummer</div>
+              <a class="text-primary text-xl" href="tel:+32469649875">+32 469 64 98 75</a>
+            </div>
+            <div class="flex flex-1 flex-col">
+              <div>E-mailadres</div>
+              <a class="text-primary text-xl" href="mailto:reserveren@play-er.be"
+                >reserveren@play-er.be</a
+              >
+            </div>
+          </div>
+          <div
+            class="flex flex-1 items-center justify-center border-4 border-gray-700 relative p-10"
+          >
+            <h2 class="absolute bg-white px-2 top-[-1.25rem] left-8">OPENINGSUREN</h2>
+            <p class="text-xl">
+              Wij zijn <span class="text-primary">elke dag</span> open van
+              <span class="text-primary">13:00</span> tot
+              <span class="text-primary">23:00</span>
+            </p>
+          </div>
+        </div>
       </div>
     </section>
     <section id="contact" class="w-full shadow-lg">
@@ -128,10 +152,20 @@ const route = useRoute();
 </template>
 
 <style lang="css">
+.text-primary {
+  color: #00adee;
+}
+
 h1 {
   color: #00adee;
   font-size: 32px;
   font-weight: 700;
+}
+
+h2 {
+  color: #323031;
+  font-size: 24px;
+  font-weight: 600;
 }
 
 section#home {
