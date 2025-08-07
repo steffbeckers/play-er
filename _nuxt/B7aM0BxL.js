@@ -1,1 +1,0 @@
-import{E as s,_ as e,x as t,y as c}from"./-7t2KQxr.js";const o=s("/images/Play-ER.svg"),a={},n={src:o,alt:"Play-ER logo"};function r(_,i){return c(),t("img",n)}const m=e(a,[["render",r]]);export{m as default};
