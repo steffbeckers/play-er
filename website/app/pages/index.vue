@@ -1,8 +1,21 @@
-<!--
 <script setup lang="ts">
-const route = useRoute();
+// const route = useRoute();
+
+useHead({
+  meta: [
+    {
+      name: "description",
+      content:
+        "Play-ER opent op vrijdag 15 augustus om 20u officieel zijn deuren. Van harte welkom! Heb je zin om te darten, snookeren, poolen, golfbiljarten, tafelvoetballen, ... of wil je gezellig een kaartje komen leggen, wat lekkers drinken en/of een babbeltje komen slaan: we hopen spoedig uw gastheer te zijn in Beverlo centrum!",
+    },
+    {
+      name: "keywords",
+      content:
+        "Play-ER, Beverlo, Beringen, Snooker, Darts, Pool, Golfbiljart, Tafelvoetbal, Kicker, Kaarten",
+    },
+  ],
+});
 </script>
--->
 
 <template>
   <main>
