@@ -127,8 +127,7 @@ useHead({
             width="660"
           />
           <div class="text-xl text-white text-center px-8">
-            Play-ER opent op <span class="text-primary">vrijdag 15 augustus</span> om
-            <span class="text-primary">20u</span> officieel zijn deuren.<br />Van harte welkom!
+            Play-ER heeft op 15 augustus officieel zijn deuren geopend.<br />Van harte welkom!
           </div>
         </div>
       </div>
@@ -249,14 +248,14 @@ useHead({
               het snelst scoort. Perfect voor een intens duel vol adrenaline.
             </p>
           </div>
-          <div class="flex flex-col gap-4">
+          <!-- <div class="flex flex-col gap-4">
             <img src="~/assets/images/games/bingo.png" alt="Play-ER Snooker" />
             <h2>BINGO (18+)</h2>
             <p>
               Probeer je geluk aan onze legendarische Tony Rus Bingokast. Spannend, nostalgisch én
               verslavend leuk.
             </p>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
