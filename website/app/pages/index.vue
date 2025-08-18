@@ -205,9 +205,7 @@ useHead({
     <section id="games" class="w-full shadow-lg">
       <div class="mx-auto max-w-6xl px-6 py-20 flex flex-col gap-10">
         <h1>GAMES</h1>
-        <div
-          class="grid grid-cols-1 grid-rows-6 sm:grid-cols-2 sm:grid-rows-3 md:grid-cols-3 md:grid-rows-2 gap-10"
-        >
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
           <div class="flex flex-col gap-4">
             <img src="~/assets/images/games/snooker.png" alt="Play-ER Snooker" />
             <h2>SNOOKER</h2>
@@ -289,6 +287,10 @@ useHead({
 </template>
 
 <style lang="css">
+html {
+  scroll-behavior: smooth;
+}
+
 .text-primary {
   color: #00adee;
 }
